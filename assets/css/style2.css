@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-btn i {
+    font-size: 2rem;
+    color: var(--text-color)
+}
+
+.back-btn span {
+    margin-left: 8px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    cursor: default;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.header-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    cursor: default;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-right: 35%;
+}

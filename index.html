@@ -21,7 +21,23 @@
 
 
     <body>
-
+        <section id="loader">
+            <div class="spinner-widget">
+                <span class="loading">Loading ....</span>
+                <div class="spinner" style="--var:0; z-index: 2"></div>
+                <div class="spinner" style="--var:1; z-index: 3"></div>
+                <div class="spinner" style="--var:2; z-index: 4"></div>
+                <div class="spinner" style="--var:3; z-index: 5"></div>
+                <div class="spinner" style="--var:4; z-index: 4"></div>
+                <div class="spinner" style="--var:5; z-index: 3"></div>
+                <div class="spinner" style="--var:6; z-index: 2"></div>
+                <div class="spinner" style="--var:7; z-index: 1"></div>
+                <div class="spinner" style="--var:8; z-index: 1"></div>
+                <div class="spinner" style="--var:9; z-index: 1"></div>
+                <div class="spinner" style="--var:10; z-index: 1"></div>
+                <div class="spinner" style="--var:11; z-index: 1"></div>
+            </div>
+        </section>
 
         <!-- Header-->
 
@@ -61,7 +77,6 @@
         </section>
 
 
-
         <!-- About Section-->
         <section class="about" id="about">
             <div class="about-img">
@@ -72,7 +87,7 @@
                 <h2 class="heading">
                     About <span> Me </span>
                 </h2>
-                <h3> Web Development </h3>
+                <h3> Web Programmer </h3>
                 <p> 
                     I am a fresh graduate from the Informatics Engineering major with a 3.33 
                     GPA who has interest and experience in creating Android applications and websites 
@@ -82,7 +97,6 @@
 
             </div>
         </section>
-
 
 
         <!-- Skills Section-->
@@ -155,7 +169,6 @@
         </section>
 
 
-
         <!-- Portofolio Section-->
         <section class="portofolio" id="portofolio">
             <h2 class="heading">
@@ -165,30 +178,29 @@
             <div class="portofolio-container">
                 <div class="portofolio-box">
                     <i class='bx bx-code-alt'></i>
-                    <h3> Web Development </h3>
+                    <h3> Web Projects </h3>
                     <p> Lorem ipsum dolor sit, amet consectetur 
                         adipisicing elit. Velit, vero. </p>
-                    <a href="404.html" class="btn" > Read More </a>
+                    <a href="web.html" class="btn" > Read More </a>
                 </div>
 
                 <div class="portofolio-box">
                     <i class='bx bx-mobile-alt'></i>
-                    <h3> Mobile Development </h3>
+                    <h3> Mobile Projects </h3>
                     <p> Lorem ipsum dolor sit, amet consectetur 
                         adipisicing elit. Velit, vero. </p>
-                    <a href="404.html" class="btn" > Read More </a>
+                    <a href="Mobile.html" class="btn" > Read More </a>
                 </div>
 
-                <div class="portofolio-box">
+                <!-- <div class="portofolio-box">
                     <i class="devicon-arduino-plain"></i>
-                    <h3> Internet of Think </h3>
+                    <h3> Mobile Projects </h3>
                     <p> Lorem ipsum dolor sit, amet consectetur 
                         adipisicing elit. Velit, vero. </p>
                     <a href="404.html" class="btn" > Read More </a>
-                </div>
+                </div> -->
             </div>
         </section>
-
 
 
         <!-- Contact Section-->
@@ -212,7 +224,6 @@
         </section>
 
 
-
         <!-- Footer-->
         <footer class="footer">
             <div class="footer-text">
@@ -232,7 +243,36 @@
         <!-- typed js-->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script type="text/javascript" > 
+            var loader 
+            function loadNow(opacity) {
+                if(opacity <= 0) {
+                    displayContent();
+                }
+                else {
+                    loader.style.opacity = opacity;
+                    window.setTimeout(function() {
+                        loadNow(opacity - 0.05)
+                    }, 150);
+                }
+            }
+            
+
+
+            function displayContent() {
+                loader.style.display = 'none';
+                document.getElementById('header').style.display = 'block';
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                loader = document.getElementById('loader');
+                loadNow(1);
+            })
+        </script>
+
         <!-- Custom JS-->
-        <script src="script.js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>

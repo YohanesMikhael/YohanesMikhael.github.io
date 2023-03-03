@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@font-face {
+    font-family: "Minimal";
+    src: url("../font/minimal.otf") format("opentype");
+}
+@font-face {
+    font-family: "Varino";
+    src: url("../font/Varino.ttf");
+}
+@font-face {
+    font-family: "Botany";
+    src: url("../font/Botany.ttf");
+}
 
 
 * {
@@ -18,6 +29,10 @@
     --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #0ef;
+
+    --Judul-font: 'Varino', sans-serif;
+    --main-font: 'Minimal', sans-serif;
+    --main-font2: 'Botany', sans-serif;
 }
 
 html {
@@ -33,6 +48,87 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+}
+
+#loader {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: var(--second-bg-color);
+    justify-content: center;
+    overflow: hidden;
+    z-index: 999;
+    position: fixed;
+}
+
+.spinner-widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    transform: rotateX(45deg);
+    /* background-color: var(--main-color); */
+}
+.spinner-widget .loading {
+    font-size: 18px;
+    color: var(--main-color);
+    transform: rotate(20deg);
+    text-shadow: 0 0 8px var(--main-color);
+}
+
+.spinner {
+    position: absolute;
+    height: 18px;
+    width: 32px;
+    bottom: calc(50% - 4px);
+    left: calc(50% - 16px);
+    background: #1f242d radial-gradient(ellipse, #0ef 40%, transparent 70%) center no-repeat;
+    background-size: 70px 100px;
+    background-position: -20px -90px;
+    transform: rotate(calc(30deg*var(--var))) translate(116px) rotate(calc(-30deg*var(--var)));
+    animation: spinner 1.5s infinite linear;
+    animation-delay: calc(var(--var)*0.125s);
+}
+
+@keyframes spinner {
+    30% {
+        height: 100px;
+        background-position: -20px -30px;
+        box-shadow: 0 -32px 32px 6px rgba(225, 107, 129, 0.4);
+    }
+
+}
+
+.spinner:before, .spinner:after {
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: #4d4d4d;
+}
+
+.spinner:before {
+    top: -16px;
+    border-radius: 50%;
+    animation: colorTop 1.5s infinite linear;
+    animation-delay: calc(var(--var)*0.125s);
+}
+
+@keyframes colorTop {
+    30% {
+        background-color: var(--main-color);
+    }
+    55% {
+        background-color: var(--main-color);
+    }
+}
+
+.spinner:after {
+    height: 16px;
+    bottom: -15px;
+    background-color: var(--bg-color);
+    border-radius: 0 0 100% 100% / 0 0 200% 200%;
 }
 
 /*    Header
@@ -56,15 +152,16 @@ section {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-color);
-    font-family: 'Quicksand', sans-serif;
+    font-family: var(--Judul-font);
     font-weight: 600;
     cursor: default;
 }
 
 .navbar a {
-    font-size: 1.7rem;
+    font-size: 2.7rem;
+    font-family: var(--main-font);
     color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
@@ -109,8 +206,9 @@ section {
 }
 
 .home-content h3 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 700;
+    font-family: var(--Judul-font);
 }
 
 .home-content h3:nth-of-type(2) {
@@ -119,10 +217,12 @@ section {
 
 span {
     color: var(--main-color);
+    font-family: var(--Judul-font);
 }
 
 .home-content h1 {
-    font-size: 5.6rem;
+    font-size: 4.6rem;
+    font-family: var(--Judul-font);
     font-weight: 700;
     line-height: 1.3;
 }
@@ -154,11 +254,12 @@ span {
 
 .btn {
     display: inline-block;
+    font-family: var(--main-font);
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
@@ -185,6 +286,7 @@ span {
 .heading {
     text-align: center;
     font-size: 4.5rem;
+    font-family: var(--Judul-font);
 }
 
 .about-content h2 {
@@ -193,11 +295,13 @@ span {
 }
 
 .about-content h3 {
-    font-size: 2.6rem;
+    font-size: 3.6rem;
+    font-family: var(--main-font2);
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    font-family: var(--main-font2);
     margin: 2rem 0 3rem;
 }
 
@@ -287,6 +391,8 @@ span {
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--second-bg-color);
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
     transition: .5 ease;
 }
 
@@ -302,10 +408,12 @@ span {
 
 .portofolio-box h3 {
     font-size: 2.6rem;
+    font-family: var(--main-font2);
 }
 
 .portofolio-box p {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
+    font-family: var(--main-font);
     margin: 1rem 0 3rem;
 }
 
@@ -365,7 +473,8 @@ span {
 }
 
 .footer-text p {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-family: var(--main-font);
 }
 
 .footer-iconTop a {

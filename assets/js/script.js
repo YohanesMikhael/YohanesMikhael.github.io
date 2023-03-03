@@ -52,17 +52,19 @@ ScrollReveal({
     delay: 200
 });
 
-ScrollReveal().reveal('.home-content, .heading, .animate', { origin: 'top'});
+ScrollReveal().reveal('.home-content, .heading, .animate ', { origin: 'top'});
 ScrollReveal().reveal('.home-img, .portofolio-container, .contact form', { origin: 'bottom'});
-ScrollReveal().reveal('.logo, .home-content h1, .about-img, .logo-container', { origin: 'left'});
+ScrollReveal().reveal('.logo, .home-content h1, .about-img, .logo-container ', { origin: 'left'});
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
 
 
 /* ===================== Typed JS ===================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Freelance', 'Web Programmer', 'Mobile Programmer'],
+    strings: ['','Freelance', 'Web Programmer', 'Mobile Programmer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
 });
+
+

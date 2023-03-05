@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title> Yohanes Mikhael </title>
+        <link rel="website icon" type="png" href="assets/img/logo1.png">
 
         <!-- CSS-->
         <link rel="stylesheet" href="assets/css/web.css">
@@ -19,7 +20,8 @@
     </head>
     <body>
         <header class="header">
-            <a href="index.html" class="back-link"><i class='bx bx-arrow-back'></i> Back </a>
+            <a onclick="back()" class="back-link"><i class='bx bx-arrow-back'></i> Back </a>
+            <a onclick="back()" class="back-link2"><i class='bx bx-arrow-back'></i></a>
             <h1 class="header-title">Website <span> Project </span> </h1>
         </header>
 
@@ -45,26 +47,6 @@
                             <a href="detail.html" class="btn">Detail</a>
                         </div>
                     </div>
-
-                    <div class="blog-post" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="blog-post__img">
-                            <img src="assets/img/web.png">
-                        </div>
-                        <div class="blog-post__info">
-                            <div class="blog-post__date">
-                                <span class="date">March 2023</span>
-                            </div>
-                            <h1 class="blog-post__title"> The Great Outdoors</h1>
-                            <p class="blog-post__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil sunt 
-                                voluptate fuga nobis saepe quo sapiente dolorum provident doloremque porro 
-                                optio tempore velit veritatis eum iste, deserunt molestias amet natus nemo 
-                                hic pariatur harum. Ipsa neque, id magni tenetur, sunt ducimus molestias sed 
-                                quasi nulla voluptate ipsum, commodi possimus?
-                            </p>
-                            <a href="#" class="btn">Detail</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -81,7 +63,12 @@
         <!-- Custom JS-->
         <script src="assets/js/detail.js"></script>
 
-        
+        <!-- tombol back-->
+        <script>
+            function back() {
+                window.history.back();
+            }
+        </script>
         
     </body>
 </html>

@@ -24,8 +24,8 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    --bg-color: #00303d;
+    --second-bg-color: #004052;
     --text-color: #fff;
     --main-color: #0ef;
     
@@ -65,6 +65,17 @@ span {
 
 .back-link {
     display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.back-link2 {
+    display: none;
     align-items: center;
     text-decoration: none;
     color: var(--text-color);
@@ -140,8 +151,8 @@ section {
     align-items: center;
     border-radius: 1.5rem;
     margin-bottom: 40px;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                -15px -15px 30px rgb(60, 60, 60);
+    box-shadow: 15px 15px 30px rgb(0, 32, 41),
+                -15px -15px 30px rgb(0, 48, 61);
 }
 
 .blog-post:hover {
@@ -152,7 +163,7 @@ section {
 .blog-post__img {
     min-width: 30rem;
     position: relative;
-    transform: translateX(-5rem);
+    transform: translateX(-2rem);
 }
 
 .blog-post__img img {
@@ -178,4 +189,65 @@ section {
     font-size: 2rem;
     text-align: justify;
     color: var(--text-color);
+}
+
+@media (max-width: 850px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .blog-post {
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 10rem;
+        margin-top: 5rem;
+    }
+
+    .blog-post {
+        flex-direction: column;
+    }
+
+    .blog-post__img {
+        min-width: 35rem;
+        max-width: 35rem;
+        height: 16rem;
+        transform: translate(0, -10rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .back-link  {
+        display: none;
+    }
+    .back-link2 {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .header-title {
+        font-size: 1rem;
+    }
+
+    .back-link2 {
+        display: none;
+    }
+
+    .blog-post__img {
+        min-width: 25rem;
+        max-width: 25rem;
+        height: 10rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .header-title {
+        font-size: 0.8rem;
+    }
 }

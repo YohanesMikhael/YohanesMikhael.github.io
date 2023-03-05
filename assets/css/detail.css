@@ -23,8 +23,8 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    --bg-color: #00303d;
+    --second-bg-color: #004052;
     --text-color: #fff;
     --main-color: #0ef;
     
@@ -56,7 +56,7 @@ section {
 .hero {
     position: relative;
     width: 100%;
-    height: 600px; /* ukuran tinggi hero */
+    height: 500px; /* ukuran tinggi hero */
 }
 
 .hero-image {
@@ -82,7 +82,7 @@ section {
     margin-bottom: 24px;
 }
 
-.button {
+.button  {
     padding: 1em 2em;
     border: none;
     border-radius: 5px;
@@ -96,6 +96,7 @@ section {
     overflow: hidden;
     outline: 2px solid var(--main-color);
     background-color: transparent;
+    cursor: pointer;
 }
 
 button:hover {
@@ -205,4 +206,101 @@ button:hover::before {
 .preview img:hover {
     transform: scale(1.1) rotateX(10deg) rotateY(10deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1200px) {
+    .detail-project {
+        margin: 0 5rem 7rem 5rem;
+    }
+
+    .Tools-project {
+        margin: 0 5rem 7rem 5rem;
+    }
+
+    .img-preview {
+        margin: 5rem 5rem;
+    }
+}
+
+@media (max-width: 1060px) {
+    .detail-project {
+        margin: 0 9rem 7rem 9rem;
+    }
+
+    .Tools-project {
+        margin: 0 9rem 7rem 9rem;
+    }
+
+    .img-preview {
+        margin: 9rem 9rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .detail-project {
+        margin: 0 12rem 7rem 12rem;
+    }
+
+    .Tools-project {
+        margin: 0 12rem 7rem 12rem;
+    }
+
+    .img-preview {
+        margin: 12rem 12rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .detail-project h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .img-project {
+        margin-bottom: 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 4.25rem;
+    }
+
+    .detail-project h2 {
+        font-size: 2rem;
+    }
+    .detail-project {
+        margin: 0 0rem 7rem 0rem;
+    }
+
+    .Tools-project {
+        margin: 0 0rem 7rem 0rem;
+    }
+
+    .img-preview {
+        margin: 0rem 0rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-content h1 {
+        font-size: 3.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+    .button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .button {
+        font-size: 8px;
+    }
 }

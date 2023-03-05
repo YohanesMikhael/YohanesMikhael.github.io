@@ -25,8 +25,8 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    --bg-color: #00303d;
+    --second-bg-color: #004052;
     --text-color: #fff;
     --main-color: #0ef;
 
@@ -49,6 +49,9 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
+
+/*    Loader
+---------------*/
 
 #loader {
     display: flex;
@@ -311,6 +314,7 @@ span {
 .skills {
     justify-content: center;
     align-items: center;
+    background: var(--second-bg-color); 
 }
 
 .skills h3 {
@@ -342,6 +346,7 @@ span {
 .logo-container ul li img {
     width: 65%;
     height: 95%;
+    object-fit: contain;
 }
 
 .logo-container ul li img:nth-child(1) {
@@ -391,8 +396,8 @@ span {
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--second-bg-color);
-    box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                -15px -15px 30px rgb(60, 60, 60);
+    box-shadow: 15px 15px 30px rgb(0, 32, 41),
+                -15px -15px 30px rgb(0, 48, 61);
     transition: .5 ease;
 }
 
@@ -419,6 +424,10 @@ span {
 
 /*    Contact Section
 ---------------------------*/
+.contact {
+    background: var(--second-bg-color);
+}
+
 .contact h2 {
     margin-bottom: 3rem;
 }
@@ -442,7 +451,7 @@ span {
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -469,7 +478,6 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
 }
 
 .footer-text p {

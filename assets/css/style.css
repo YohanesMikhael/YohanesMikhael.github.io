@@ -613,7 +613,7 @@ span {
 
 @media (max-width: 365px) {
     #menu-icon {
-        margin-left : 10px;
+        margin-right : 15px;
     }
 
     .home-img img {

@@ -540,6 +540,7 @@ span {
     #menu-icon {
         display: block;
         margin-right: 50px;
+        margin: unset;
     }
 
     .navbar {
@@ -612,10 +613,6 @@ span {
 }
 
 @media (max-width: 365px) {
-    #menu-icon {
-        margin-right : 15px;
-    }
-
     .home-img img {
         width: 90vw;
     }

@@ -612,6 +612,10 @@ span {
 }
 
 @media (max-width: 365px) {
+    #menu-icon {
+        margin-left : 10px;
+    }
+
     .home-img img {
         width: 90vw;
     }

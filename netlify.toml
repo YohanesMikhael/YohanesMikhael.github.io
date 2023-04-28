@@ -1,0 +1,9 @@
+[build]
+  command = "composer install && php artisan optimize && npm run production"
+  publish = "public"
+
+[[plugins]]
+  package = "@netlify/plugin-php"
+
+[[plugins]]
+  package = "@netlify/plugin-cache"

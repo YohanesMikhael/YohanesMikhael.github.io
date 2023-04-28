@@ -1,9 +1,14 @@
 [build]
-  command = "composer install && php artisan optimize && npm run production"
+  command = "composer install && php artisan build"
   publish = "public"
 
-[[plugins]]
-  package = "@netlify/plugin-php"
+[build.environment]
+  PHP_VERSION = "7.4"
 
-[[plugins]]
-  package = "@netlify/plugin-cache"
+[context.production.environment]
+  APP_ENV = "production"
+  APP_KEY = "<YOUR_APP_KEY>"
+  DB_HOST = "127.0.0.1"
+  DB_DATABASE = "portofolio"
+  DB_USERNAME = "postgres"
+  DB_PASSWORD = "12345678"

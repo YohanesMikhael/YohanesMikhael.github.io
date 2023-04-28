@@ -43,14 +43,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('framework', FrameworkController::class);
     Route::resource('language', LanguageController::class);
     Route::resource('web', WebController::class);
-    Route::resource('account', AccountController::class);
-    Route::middleware(['web', 'auth.password'])->group(function () {
-        Route::resource('account', AccountController::class);
-    });
     Route::resource('feedback', FeedbackController::class)->except(['store']);
-    Route::middleware(['web'])->group(function () {
-        Route::get('/authenticate-with-password', [AuthController::class, 'authenticateWithPassword'])->name('authenticate-with-password');
-        Route::post('/process-authenticate-with-password', [AuthController::class, 'processAuthenticateWithPassword'])->name('process-authenticate-with-password');
-    });
 });
 

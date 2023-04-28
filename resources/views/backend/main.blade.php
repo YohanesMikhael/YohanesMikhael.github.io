@@ -71,9 +71,6 @@
                     <li class="{{ Request::route()->getName() == 'feedback.index' ? 'active-page' : '' }}" >
                         <a href="{{ route('feedback.index') }}"><i data-feather="inbox"></i>Feedback</a>
                     </li>
-                    <li class="{{ Request::route()->getName() == 'account.index' ? 'active-page' : '' }}" >
-                        <a href="{{ route('account.index') }}"><i data-feather="shield"></i> Account</a>
-                    </li>
                 </ul>
                 <a href="#" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
             </div>

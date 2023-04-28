@@ -1,0 +1,323 @@
+@font-face {
+    font-family: "Minimal";
+    src: url("../font/minimal.otf") format("opentype");
+}
+@font-face {
+    font-family: "Varino";
+    src: url("../font/Varino.ttf");
+}
+@font-face {
+    font-family: "Botany";
+    src: url("../font/Botany.ttf");
+}
+
+:root {
+    --bg-color: #00303d;
+    --second-bg-color: #004052;
+    --text-color: #fff;
+    --main-color: #0ef;
+    
+    --Judul-font: 'Varino', sans-serif;
+    --main-font: 'Minimal', sans-serif;
+    --main-font2: 'Botany', sans-serif;
+}
+
+img {
+    object-fit: contain;
+}
+
+.modal-content {
+    background-color: #181821; /* ganti dengan warna yang diinginkan */
+}
+
+.modal-title,
+.modal-body {
+    color : #fff;
+}
+
+.img {
+    height: 100px;
+    width: 100px;
+}
+
+
+.btn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+    float: right;
+    margin-bottom: 2rem;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+    transform: skewX(30deg) translate(180%, -50%);
+    transition-delay: 0.1s;
+}
+
+.btn-close {
+    background-color: #FFF;
+}
+
+.action {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    border: solid 3px transparent;
+    background-clip: padding-box;
+    box-shadow: 0px 0px 0px 3px #ffffff00;
+    color: white;
+    min-height: 43px;
+    padding: 0 13px 0 13px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+}
+
+.action:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+}
+
+.action:hover {
+    box-shadow: 0px 0px 0px 3px #30a1b8;
+}
+
+.btn-edit:link,
+.btn-edit:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(35, 201, 184);
+    padding: 10px 30px;
+    border:2px solid;
+    border-radius: 1000px;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn-edit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(35, 201, 184, .5);
+}
+
+.btn-edit:active {
+    transform: translateY(-3px);
+}
+
+.btn-edit::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn-edit:hover::after {
+    background-color: rgb(0, 238, 255);
+    transform: scaleX(1.4) scaleY(1.5);
+    opacity: 0;
+}
+
+.input {
+    max-width: 190px;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    margin: 5px;
+    transition: .5s;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform: rotate(90deg);
+    margin-top: 20px;
+}
+
+input:focus {
+    width: 150px;
+    transform: rotate(0);
+}
+
+.text {
+    color: #808080;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-style: italic;
+}
+
+.delete {
+    position: relative;
+    font-family: 'Heebo', sans-serif;
+    padding: 12px 40px;
+    border: 0;
+    background: rgb(148, 1, 1);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 100px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    opacity: 0.9;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.delete:hover {
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.562);
+    transform: scale(1.01);
+    box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.575);
+}
+
+.delete::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 50%;
+    height: 100%;
+    transform: rotate(80deg);
+    background: #ffffff77;
+    filter: blur(10px);
+    transition: 0.6s ease-in-out;
+}
+
+.delete:hover::after {
+    left: 100%;
+}
+
+.input-edit {
+    border: 2px solid #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #212121;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input-edit:focus {
+    width: 32rem;
+    outline-color: white;
+    background-color: #212121;
+    color: #e8e8e8;
+    box-shadow: 5px 5px #888888;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.text-container {
+    width: 50%;
+    padding: 5rem;
+}
+
+.image-container {
+    width: 50%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    display: inline-block;
+    font-family: var(--main-font2); 
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.content {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.line {
+    margin: 5px 0;
+    border: none;
+    border-top: 3px solid var(--text-color);
+}
+
+.skillset-title {
+    font-family: var(--main-font2); 
+    font-size: 30px;
+    color: var(--text-color);
+    margin-top: 40px;
+}
+
+.skillset-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.skill {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.video-container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.greater-than {
+    color: white;
+    padding: 5px;
+}
